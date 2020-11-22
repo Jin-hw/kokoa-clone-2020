@@ -1,5 +1,5 @@
 #chat-screen {
-  background-color: #abc1d1;
+  background-color: white;
 }
 
 #chat-screen .alt-header,
@@ -7,7 +7,7 @@
   top: 0;
   position: fixed;
   width: 100%;
-  background-color: #abc1d1;
+  background-color: white;
   box-sizing: border-box;
   z-index: 1;
 }
@@ -44,9 +44,19 @@
   margin-bottom: 20px;
 }
 
+@keyframes slide-right {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .message-row {
   width: 100%;
   display: flex;
+  animation: slide-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .message-row img {
@@ -82,8 +92,18 @@
   font-size: 13px;
 }
 
+@keyframes slide-left {
+  0% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .message-row--own {
   justify-content: flex-end;
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .message-row--own .message__bubble {
@@ -92,6 +112,7 @@
   border-top-right-radius: 0px;
   margin-right: 0px;
   margin-left: 5px;
+  color: white;
 }
 
 .message-row--own .message__info {
