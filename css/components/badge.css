@@ -1,3 +1,27 @@
+@keyframes shake-vertical {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    transform: translateY(8px);
+  }
+  80% {
+    transform: translateY(6.4px);
+  }
+  90% {
+    transform: translateY(-6.4px);
+  }
+}
+
 .badge {
   background-color: tomato;
   width: 20px;
@@ -9,4 +33,5 @@
   color: white;
   font-weight: 600;
   font-size: 12px;
+  animation: shake-vertical 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }

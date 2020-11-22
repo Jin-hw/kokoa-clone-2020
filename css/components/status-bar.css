@@ -24,6 +24,37 @@
   justify-content: flex-end;
   align-items: center;
 }
-.status-bar__column .fa-battery-full {
+.status-bar__column .fa-battery-quarter {
   margin: 0px 5px;
+}
+
+@keyframes vibrate-2 {
+  0% {
+    transform: translate(0);
+    color: rgb(224, 53, 53);
+  }
+  20% {
+    transform: translate(1px, -1px);
+    color: rgb(19, 2, 255);
+  }
+  40% {
+    transform: translate(1px, 1px);
+    color: rgb(224, 53, 53);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+    color: rgb(19, 2, 255);
+  }
+  80% {
+    transform: translate(-1px, -1px);
+    color: rgb(224, 53, 53);
+  }
+  100% {
+    transform: translate(0);
+    color: rgb(19, 2, 255);
+  }
+}
+
+.fa-battery-quarter {
+  animation: vibrate-2 0.3s linear infinite both;
 }
